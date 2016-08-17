@@ -5,7 +5,7 @@ type user struct {
 	Email string
 }
 
-type admin struct {
+type Admin struct {
 	user
 	Rights int
 }

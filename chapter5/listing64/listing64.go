@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	counter := counters.alertCounter(10)
-
-	fmt.Printf("Counter: %s\n", counter)
+	//counter := counters.alertCounter(10)
+	counter := counters.New(10)
+	fmt.Printf("Counter: %d\n", counter)
 }

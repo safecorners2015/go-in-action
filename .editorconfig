@@ -1,0 +1,60 @@
+# EidtorConfig: http://editorconfig.org
+# see doc/coding_standards.md
+
+root = true
+
+
+[*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespcae = true
+insert_final_newline= true
+
+# C
+# [*.c]
+
+# C header files
+# [*.h]
+
+# C++
+[*.cpp]
+indent_style = tab
+indent_size = 4
+
+# Erlang
+[*.erl]
+
+# Golang
+[*.go]
+indent_style = space
+indent_size = 2
+
+# Haskell
+# [*.{hs,lhs}]
+
+# Java
+# [*.java]
+
+# Javascript
+[*.{js,jsx}]
+indent_style = space
+indent_size = 2
+
+# JSON
+[*.json]
+indent_style = space
+indent_size = 2
+
+[*.{md,markdown}]
+indent_style = space
+trim_trailing_whitespace = false
+
+# OCaml
+# [*.ml]
+
+# Python
+[*.py]
+indent_style = tab
+indent_size = 4
+
+

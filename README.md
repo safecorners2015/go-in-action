@@ -6,7 +6,7 @@
 3. [ ] Pacakaing & Tooling
 4. [x] Arrays, Slices & Maps
 5. [x] Go's Type System
-6. [ ] Concurrency
+6. [x] Concurrency
 7. [ ] Concurrency Patterns
 8. [ ] Standard Library
 9. [ ] Testing & Benchmarking

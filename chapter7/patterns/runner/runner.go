@@ -52,7 +52,7 @@ func (r *Runner) Add(tasks ...func(int)) {
 // Start runs all tasks and monitors channel exists.
 func (r *Runner) Start() error {
 	// We wnat to receive all interrupt based signals.
-	signal.Nofity(r.interrupt, os.Interrupt)
+	signal.Notify(r.interrupt, os.Interrupt)
 
 	// Run the different tasks on a different goroutine.
 	go func() {
@@ -70,7 +70,7 @@ func (r *Runner) Start() error {
 }
 
 // run executes each registered task.
-func (r *Runner) run() err {
+func (r *Runner) run() error {
 	for id, task := range r.tasks {
 		// Check for an interrupt signal from the OS.
 		if r.gotInterrupt() {

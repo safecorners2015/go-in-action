@@ -69,7 +69,7 @@ func (p *Pool) Release(r io.Closer) {
 
 	select {
 	// Attempt to place the new resource on the queue.
-	case p.resource <- r:
+	case p.resources <- r:
 		log.Println("Release:", "In Queue")
 
 	// If the queue is already at cap we close the resource.
@@ -101,7 +101,4 @@ func (p *Pool) Close() {
 	for r := range p.resources {
 		r.Close()
 	}
-}
-func main() {
-	fmt.Println("vim-go")
 }

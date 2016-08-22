@@ -36,7 +36,7 @@ var idCounter int32
 
 // createConnection is a factory method that will be called by
 // the pool when a new connection is needed.
-func createConnection() (id.Closer, error) {
+func createConnection() (io.Closer, error) {
 	id := atomic.AddInt32(&idCounter, 1)
 	log.Println("Create: New Connection", id)
 
